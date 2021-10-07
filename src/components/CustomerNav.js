@@ -4,6 +4,8 @@ import { Link, useHistory } from "react-router-dom";
 import { customerSignOutAction } from "../redux/CustomerLoginReducer";
 
 import { updateRenderAction } from "../redux/ProjectReducer";
+import { Button } from "@material-ui/core";
+import ExitToApp from '@material-ui/icons/ExitToApp';
 
 export const CustomerNav = () => {
 
@@ -32,12 +34,17 @@ export const CustomerNav = () => {
           <Nav.Link as={Link} to="/customer-bug-list">
             Bug List
           </Nav.Link>
-          <Nav.Link as={Link} to="/customer-profile">
+          <Nav.Link as={Link} className="mr-3" to="/customer-profile">
             Profile
           </Nav.Link>
-          <Nav.Link onClick={cstSignOutAction} >
-            Sign out
-          </Nav.Link>
+          <Button
+                 startIcon={<ExitToApp />}
+                 variant="contained"
+                 color="secondary"
+                 size="small"
+                 onClick={() => cstSignOutAction()}>
+                 Sign Out
+              </Button>
   
         </Nav>
       </Navbar.Collapse>

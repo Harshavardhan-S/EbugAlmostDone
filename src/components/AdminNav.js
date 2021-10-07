@@ -3,6 +3,9 @@ import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { adminSignOutAction } from "../redux/AdminLoginReducer";
 import { updateRenderAction } from "../redux/ProjectReducer";
+import logo from "../bug2.png";
+import { Button } from "@material-ui/core";
+import ExitToApp from '@material-ui/icons/ExitToApp';
 
 export const AdminNav = () => {
 
@@ -22,7 +25,7 @@ export const AdminNav = () => {
     <Navbar bg="dark" variant="dark" expand="lg">
       {/* <Navbar.Brand href="#home">E-BUG TRACKER</Navbar.Brand> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
+      <img align="left" src={logo} height="5%" width="5%" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
         <Nav.Link as={Link} to="/admin-welcome">
@@ -43,12 +46,20 @@ export const AdminNav = () => {
           <Nav.Link as={Link} to="/project-list">
             Project List
           </Nav.Link>
-          <Nav.Link as={Link} to="/customer-list">
+          <Nav.Link as ={Link} className ="mr-3"to="/customer-list">
             Customer List
           </Nav.Link>
-          <Nav.Link onClick={admSignOutAction} >
+          {/* <Nav.Link onClick={admSignOutAction} >
             Sign out
-          </Nav.Link>
+          </Nav.Link> */}
+          <Button
+                 startIcon={<ExitToApp />}
+                 variant="contained"
+                 color="secondary"
+                 size="small"
+                 onClick={() => admSignOutAction()}>
+                 Sign Out
+              </Button>
   
         </Nav>
       </Navbar.Collapse>

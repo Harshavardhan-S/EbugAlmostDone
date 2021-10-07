@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { updateRenderAction } from "../redux/ProjectReducer";
 import { staffSignOutAction } from "../redux/StaffProfileReducer";
+import { Button } from "@material-ui/core";
+import ExitToApp from '@material-ui/icons/ExitToApp';
 
 export const StaffNav = () => {
 
@@ -28,12 +30,17 @@ export const StaffNav = () => {
           <Nav.Link as={Link} to="/staff-profile">
            Profile
           </Nav.Link>
-          <Nav.Link as={Link} to="/staff-bug-list">
+          <Nav.Link as={Link} className="mr-3" to="/staff-bug-list">
             Bug List
           </Nav.Link>
-          <Nav.Link onClick={stfSignOutAction} >
-            Sign out
-          </Nav.Link>
+           <Button
+                 startIcon={<ExitToApp />}
+                 variant="contained"
+                 color="secondary"
+                 size="small"
+                 onClick={() => stfSignOutAction()}>
+                 Sign Out
+              </Button>
   
         </Nav>
       </Navbar.Collapse>

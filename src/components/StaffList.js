@@ -48,7 +48,7 @@ export const StaffList = () => {
       </div>
 
       <table className="table">
-        <thead className="thead-light">
+        <thead className="thead-dark">
           <tr>
             <th scope="col">Staff Id</th>
             <th scope="col">Name</th>

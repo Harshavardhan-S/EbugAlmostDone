@@ -49,9 +49,9 @@ export const CustomerList = () => {
         
 
         <div >
-          <div  className="alert alert-primary">
+          <div  className="alert alert-secondary">
             <h3>
-              <center>LIST OF CUSTOMERS</center>
+              Customer List
             </h3>
           </div>
 
