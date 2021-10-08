@@ -6,6 +6,7 @@ import { customerSignOutAction } from "../redux/CustomerLoginReducer";
 import { updateRenderAction } from "../redux/ProjectReducer";
 import { Button } from "@material-ui/core";
 import ExitToApp from '@material-ui/icons/ExitToApp';
+import logo from "../bug2.png";
 
 export const CustomerNav = () => {
 
@@ -25,9 +26,9 @@ export const CustomerNav = () => {
     <Navbar bg="dark" variant="dark" expand="lg">
       {/* <Navbar.Brand href="#home">E-BUG TRACKER</Navbar.Brand> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
+      <img align="left" src={logo} height="5%" width="5%" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
+        <Nav className="ml-auto"style={{ fontFamily: "initial", fontSize: "19px" }}>
           <Nav.Link as={Link} to="/bug-add">
             Add Bug 
           </Nav.Link>

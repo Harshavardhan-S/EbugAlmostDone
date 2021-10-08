@@ -43,6 +43,7 @@ export const ProjectList = () => {
         </center>
       </div>
       <table className="table">
+     
         <thead
           className="thead-dark"
           style={{ fontFamily: "initial", fontSize: "19px" }}
@@ -63,6 +64,10 @@ export const ProjectList = () => {
           </tr>
         </thead>
         <tbody>
+        {state.project.projectList.length===0 && <center>
+      <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+      <th scope="row">Currently there are no projects</th>
+      </h4></center>}
           {state.project.projectList.map((item, index) => (
             <tr key={index}>
               <th scope="row">

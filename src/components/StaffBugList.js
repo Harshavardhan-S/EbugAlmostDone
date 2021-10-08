@@ -47,12 +47,15 @@ export const StaffBugList = () => {
   return (
     <div>
      
-      <div className="alert alert-secondary ">
-        <h2>Staff Bug List</h2>
+     <div>
+      <center>
+      <h3 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+        LIST OF BUGS
+      </h3></center>
       </div>
 
       <table className="table">
-        <thead className="thead-light">
+        <thead className="thead-dark" style={{ fontFamily: "initial", fontSize: "19px" }}>
           <tr>
             <th scope="col">Bug Id</th>
             <th scope="col">Bug Title</th>
@@ -70,6 +73,10 @@ export const StaffBugList = () => {
           </tr>
         </thead>
         <tbody className="text-dark">
+        {state.bug.staffBugList.length===0 && <center>
+      <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+      <th scope="row">Currently there are No bugs assigned to you</th>
+      </h4></center>}
           {state.bug.staffBugList.map((item, index) => (
             <tr key={index}>
               <th scope="row">{item.bugId}</th>

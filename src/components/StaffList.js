@@ -42,13 +42,17 @@ export const StaffList = () => {
 
   return (
     <div>
-     
-      <div className="alert alert-secondary ">
-        <h2>Staff List</h2>
+      <div>
+      <center>
+      <h3 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+        LIST OF STAFFS
+      </h3></center>
       </div>
 
       <table className="table">
-        <thead className="thead-dark">
+      
+        <thead className="thead-dark" style={{ fontFamily: "initial", fontSize: "19px" }}>
+          
           <tr>
             <th scope="col">Staff Id</th>
             <th scope="col">Name</th>
@@ -63,6 +67,10 @@ export const StaffList = () => {
           </tr>
         </thead>
         <tbody className="text-dark">
+          {state.staff.staffList.length===0 && <center>
+      <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+      <th scope="row">Currently there are no staff </th>
+      </h4></center>}
           {state.staff.staffList.map((item, index) => (
             <tr key={index}>
               <th scope="row">{item.staffId}</th>

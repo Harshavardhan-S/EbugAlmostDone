@@ -27,7 +27,7 @@ export const AdminNav = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <img align="left" src={logo} height="5%" width="5%" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
+        <Nav className="ml-auto" style={{ fontFamily: "initial", fontSize: "19px" }}>
         <Nav.Link as={Link} to="/admin-welcome">
             Home
           </Nav.Link>

@@ -30,14 +30,14 @@ export const BugList = () => {
     
       
      <div >
-      <div className="alert alert-secondary ">
-      
-        <h2>Bug List</h2>
-       
+       <div>
+       <center>
+      <h3 className="mt-4 mb-3  " style={{ fontFamily: "initial" }}>
+        LIST OF BUGS
+      </h3></center>
       </div>
-
       <table className="table">
-        <thead className="thead-light">
+        <thead className="thead-dark"  style={{ fontFamily: "initial", fontSize: "19px" }}>
           <tr>
             <th scope="col">Bug Id</th>
             <th scope="col">Bug Title</th>
@@ -56,6 +56,10 @@ export const BugList = () => {
           </tr>
         </thead>
         <tbody className="text-dark">
+        {state.bug.bugList.length===0 && <center>
+      <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+      <th scope="row">Currently there are No Bugs Available</th>
+      </h4></center>}
           {state.bug.bugList.map((item, index) => (
             <tr key={index}>
               <th scope="row">{item.bugId}</th>

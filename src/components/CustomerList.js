@@ -49,26 +49,31 @@ export const CustomerList = () => {
         
 
         <div >
-          <div  className="alert alert-secondary">
-            <h3>
-              Customer List
-            </h3>
-          </div>
+        <div>
+      <center>
+      <h3 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+        LIST OF CUSTOMERS
+      </h3></center>
+      </div>
 
           <table className="table" >
-            <thead className="thead-dark">
+            <thead className="thead-dark" style={{ fontFamily: "initial", fontSize: "19px" }}>
               <tr>
                 <th scope="col">CustomerID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Username</th>
                 <th scope="col">Password</th>
                 <th scope="col">Gender</th>
-                <th scope="col">Emailid</th>
+                <th scope="col"><center>Emailid</center></th>
                 <th scope="col">TicketCount</th>
-                <th scope="col">Mobile Number</th>
+                <th scope="col"><center>Mobile Number</center></th>
               </tr>
             </thead>
             <tbody className="text-dark">
+            {state.customer.customerList.length===0 && <center>
+      <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+      <th scope="row">Currently there are no customers</th>
+      </h4></center>}
               {state.customer.customerList.map((item, index) => (
                 <tr key={index}>
                   <th scope="row">{item.customerId}</th>
