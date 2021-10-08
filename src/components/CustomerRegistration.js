@@ -168,7 +168,7 @@ export const CustomerRegistration = () => {
                   className="form-control form-control-lg mb-1  w-50"
                   placeholder="Enter Password"
                   minLength="6"
-                  maxLength="30"
+                  maxLength="25"
                   required
                 />
               </div>
@@ -223,7 +223,7 @@ export const CustomerRegistration = () => {
                     onChange={updateMobileNumber}
                     className="form-control form-control-lg mb-1  w-50"
                     placeholder="Enter Mobile Number"
-                    minLength="6"
+                    minLength="10"
                     maxLength="10"
                     required
                   />

@@ -85,7 +85,7 @@ export const CustomerLogin = () => {
                   value={username}
                   onChange={updateUserName}
                   minLength="3"
-                  maxLength="25"
+                  maxLength="30"
                   className="form-control form-control-lg mb-1 w-50"
                   required
                 />
