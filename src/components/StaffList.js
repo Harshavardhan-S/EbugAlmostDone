@@ -7,6 +7,7 @@ import { deleteStaffAction, getAllStaffAction, updateRenderAction } from "../red
 import { Button } from "@material-ui/core";
 import UpdateIcon from "@material-ui/icons/Update";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { Link } from "react-router-dom";
 
 export const StaffList = () => {
 
@@ -44,14 +45,14 @@ export const StaffList = () => {
     <div>
       <div>
       <center>
-      <h3 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+      <h3 className="mt-4 mb-3 sticky-top "style={{ fontFamily: "initial" }}>
         LIST OF STAFFS
       </h3></center>
       </div>
 
       <table className="table">
       
-        <thead className="thead-dark" style={{ fontFamily: "initial", fontSize: "19px" }}>
+        <thead className="thead-dark sticky-top" style={{ fontFamily: "initial", fontSize: "19px" }}>
           
           <tr>
             <th scope="col">Staff Id</th>
@@ -67,10 +68,11 @@ export const StaffList = () => {
           </tr>
         </thead>
         <tbody className="text-dark">
-          {state.staff.staffList.length===0 && <center>
+        <th colSpan="10">
+        {state.staff.staffList.length===0 && <center>
       <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
-      <th scope="row">Currently there are no staff </th>
-      </h4></center>}
+      <th scope="row">Currently there are no staff, to Add a staff <Link to ="/staff-add"><input type="button" className="text-primary btn btn-lg btn-link " value = "Click here"/> </Link></th>
+      </h4></center>}</th>
           {state.staff.staffList.map((item, index) => (
             <tr key={index}>
               <th scope="row">{item.staffId}</th>

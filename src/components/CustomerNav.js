@@ -23,7 +23,7 @@ export const CustomerNav = () => {
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg" className="sticky-top">
       {/* <Navbar.Brand href="#home">E-BUG TRACKER</Navbar.Brand> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <img align="left" src={logo} height="5%" width="5%" />

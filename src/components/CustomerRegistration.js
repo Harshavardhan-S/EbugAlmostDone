@@ -88,16 +88,16 @@ export const CustomerRegistration = () => {
   };
 
   return (
-    <div className="bg bg-light p-4">
+    <div className="add" style={{ background: "", height: "800px"}}>
       <div style={{ background: "", height: "800px" }}>
         <div className="newregistration" style={{ height: "750px" }}>
-          <div className="alert alert-primary">
+          <div className="alert alert-primary sticky-top " >
           {state.customer.uref.customerId ? (
                   <h3>
                     <center>UPDATE CUSTOMER DETAILS</center>
                   </h3>
                 ) : (
-                  <h3>
+                  <h3 >
                     <center>REGISTRATION FOR NEW CUSTOMER</center>
                   </h3>
                 )}

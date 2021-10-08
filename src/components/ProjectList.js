@@ -37,7 +37,7 @@ export const ProjectList = () => {
      
       <div>
         <center>
-          <h3 className="mt-4 mb-3" style={{ fontFamily: "initial" }}>
+          <h3 className="mt-4 mb-3 sticky-top" style={{ fontFamily: "initial" }}>
             LIST OF PROJECTS
           </h3>
         </center>
@@ -45,7 +45,7 @@ export const ProjectList = () => {
       <table className="table">
      
         <thead
-          className="thead-dark"
+          className="thead-dark sticky-top"
           style={{ fontFamily: "initial", fontSize: "19px" }}
         >
           <tr>
@@ -64,10 +64,11 @@ export const ProjectList = () => {
           </tr>
         </thead>
         <tbody>
+        <th colSpan="10">
         {state.project.projectList.length===0 && <center>
       <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
-      <th scope="row">Currently there are no projects</th>
-      </h4></center>}
+      <th scope="row">Currently there are no projects, to Add a Project <Link to ="/project-upsert"><input type="button" className="text-primary btn btn-lg btn-link " value = "Click here"/> </Link></th>
+      </h4></center>}</th>
           {state.project.projectList.map((item, index) => (
             <tr key={index}>
               <th scope="row">

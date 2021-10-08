@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { getAllCustomerBugsAction } from "../redux/BugReducer";
-
+import { Link } from "react-router-dom";
 
 export const CustomerBugList = () => {
 
@@ -23,13 +23,13 @@ export const CustomerBugList = () => {
      
      <div>
       <center>
-      <h3 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+      <h3 className="mt-4 mb-3 sticky-top "style={{ fontFamily: "initial" }}>
         LIST OF BUGS
       </h3></center>
       </div>
 
       <table className="table">
-        <thead className="thead-dark"style={{ fontFamily: "initial", fontSize: "19px" }}>
+        <thead className="thead-dark sticky-top"style={{ fontFamily: "initial", fontSize: "19px" }}>
           <tr>
             <th scope="col">Bug Id</th>
             <th scope="col">Bug Title</th>
@@ -45,11 +45,12 @@ export const CustomerBugList = () => {
             
           </tr>
         </thead>
-        <tbody className="text-dark">
+        <tbody className="text-dark ">
+          <th colSpan="10">
         {state.bug.customerBugList.length===0 && <center>
       <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
-      <th scope="row">Currently you have not raised any Bug</th>
-      </h4></center>}
+      <th scope="row">Currently you have not raised any bugs, to raise a Bug <Link to ="/bug-add"><input type="button" className="text-primary btn btn-lg btn-link " value = "Click here"/> </Link></th>
+      </h4></center>}</th>
           {state.bug.customerBugList.map((item, index) => (
             <tr key={index}>
               <th scope="row">{item.bugId}</th>

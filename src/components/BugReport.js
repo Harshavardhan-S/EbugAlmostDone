@@ -39,12 +39,7 @@ backgroundSize:"cover",
 backgroundRepeat:"no-repeat"}}
 >
 
-  <div className="d-flex flex-row-reverse alert alert-info">  
-     <span className="col-5 p-1">  
-         <Link to="/bug-report">
-             <h5 className="text-right"> Back </h5> 
-         </Link>
-     </span> 
+  <div className=" alert alert-info"> 
        
      <center> 
           <h2> Bug Report </h2> 

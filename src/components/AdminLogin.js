@@ -33,7 +33,7 @@ export const AdminLogin = () => {
 
   // REACT ROUTE DOM
   if (state.adminlogin.authSuccess === true) {
-    history.push("/staff-list");
+    history.push("/bug-list");
     console.log("success");
   }
 

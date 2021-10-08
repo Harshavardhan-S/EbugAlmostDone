@@ -32,7 +32,20 @@ export const BugSolution = () => {
         e.preventDefault();
     
         const isFormValid = formEl.current.checkValidity();
-        if (isFormValid) {
+        if (bugSolution === null) 
+
+        {
+
+          var error = document.getElementById("error");
+          error.textContent = "Please type something before posting your Solution"
+          error.style.color = "red"  
+            // Changing content and color of content          
+           setTimeout(() => {
+              error.textContent = ""
+            }, 3000);        
+          }
+        else if (isFormValid) {
+        
           dispatch(
             bugSolutionAction({
               bugId: state.bug.uref.bugId,  
@@ -177,7 +190,8 @@ export const BugSolution = () => {
         
 <div className="row justify-content-center text-primary mt-2 mb-3">
        <h3>Give Bug Solution</h3>
-         </div>  
+         </div>
+         <div>  
               <textarea 
                   className="Text1" 
                   cols="75" 
@@ -187,7 +201,9 @@ export const BugSolution = () => {
                   onChange={updateBugSolution}
                   required
                 > 
-             </textarea>
+             </textarea> 
+             <span id="error"></span>
+             </div>
         
              <div className="row mb-1 mt-4 justify-content-center">
              <input

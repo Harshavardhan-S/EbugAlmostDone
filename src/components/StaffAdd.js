@@ -109,7 +109,9 @@ export const StaffAdd = () => {
    return (
     <div className="add" style={{ height: "750px" }}>
        
-      <div className="alert alert-secondary">
+      <div className="alert alert-secondary" style={{
+                  fontFamily: "initial",
+                }}>
         {state.staff.uref.staffId ? (
           <center>
             <h2>Staff Update</h2>
@@ -124,13 +126,17 @@ export const StaffAdd = () => {
         <div>
          {state.staff.progress && ( 
             state.staff.uref.staffId ? (
-        <div className="row mb-1 justify-content-center">
+        <div className="row mb-1 justify-content-center" style={{
+          fontFamily: "initial",
+        }}>
           <div className="mx-4 alert alert-success w-50 ">
             staff updated Successfully
           </div>
         </div>
          ) : (
-            <div className="row mb-1 justify-content-center">
+            <div className="row mb-1 justify-content-center" style={{
+              fontFamily: "initial",
+            }}>
               <div className="mx-4 alert alert-success w-50 ">
                 Staff added Successfully
               </div>
@@ -140,8 +146,16 @@ export const StaffAdd = () => {
       </div>
 
       <form ref={formEl} className="mx-4 needs-validation" noValidate>
-
-        <div className="row mb-1 justify-content-center">
+      <div className="row text-light col-7 justify-content-center" style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h4> Name</h4>
+       </div>
+        <div className="row mb-1 justify-content-center " style={{
+                  fontFamily: "initial",
+                  fontSize: "50px",
+                }}>
         {state.staff.uref.staffId ? (
           <input
             type="text"
@@ -163,7 +177,15 @@ export const StaffAdd = () => {
           /> )}
         </div>
 
-        <div className="row mb-1 justify-content-center">
+        <div className="row text-light col-6 ml-5 justify-content-center" style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h4>Email Id</h4>
+       </div>
+        <div className="row mb-1 justify-content-center" style={{
+                  fontFamily: "initial",
+                }}>
         {state.staff.uref.staffId ? (
           <input
             type="email"
@@ -185,7 +207,15 @@ export const StaffAdd = () => {
         )}
         </div>
 
-        <div className="row mb-1 justify-content-center">
+        <div className="row text-light col-7 ml-3 justify-content-center" style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h4>Designation</h4>
+       </div>
+        <div className="row mb-1 justify-content-center" style={{
+                  fontFamily: "initial",
+                }}>
           {state.staff.uref.staffId ? (
             <select
               className="custom-select custom-select-lg w-50"
@@ -267,8 +297,15 @@ export const StaffAdd = () => {
         </div>
 
         
-
-        <div className="row mb-1 justify-content-center">
+        <div className="row text-light col-8 justify-content-center" style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h4>Mobile Number</h4>
+       </div>
+        <div className="row mb-3 justify-content-center" style={{
+                  fontFamily: "initial",
+                }}>
         {state.staff.uref.staffId ? (
           <input
             type="text"
@@ -295,7 +332,9 @@ export const StaffAdd = () => {
       </div>
 
         <div>
-          <div className="row mb-1 justify-content-center">
+          <div className="row mb-1 justify-content-center" style={{
+                  fontFamily: "initial",
+                }} >
             {state.staff.uref.staffId ? (
               <input
                 type="button"

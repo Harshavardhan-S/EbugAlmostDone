@@ -99,7 +99,8 @@ export const BugRaise = () => {
    
    return (
     <div className="add" style={{ height: "750px" }}>
-      <div className="alert alert-secondary">
+      <div className="alert alert-secondary" style={{
+          fontFamily: "initial"}}>
       
        
           <center>
@@ -110,8 +111,10 @@ export const BugRaise = () => {
     
         <div> 
         {state.bug.progress && 
-            <div className="row mb-1 justify-content-center">
-              <div className="mx-4 alert alert-success w-75">
+            <div className="row mb-1 justify-content-center" style={{
+              fontFamily: "initial"}}>
+          
+              <div className="mx-4 alert alert-success w-100" >
                 Bug raised Successfully
               </div>
             </div>
@@ -119,12 +122,19 @@ export const BugRaise = () => {
       </div>
 
       <form ref={formEl} className="mx-5 needs-validation" noValidate>
-      <div className="row"> 
+      <div className="row text-light " style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h5>Bug Title</h5>
+       </div>
+      <div className="row" style={{
+              fontFamily: "initial"}}>
       <div className="col">
         <div className="row mb-1 ">  
           <input
             type="text"
-            className="form-control form-control-lg w-75"
+            className="form-control form-control-lg w-100"
             value={bugTitle}
             placeholder="Enter bugTitle"
             onChange={updateBugTitle}
@@ -134,11 +144,16 @@ export const BugRaise = () => {
 
 
         
-
+        <div className="row text-light " style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h5>Bug Description</h5>
+       </div>
         <div className="row mb-1 ">  
           <input
             type="text"
-            className="form-control form-control-lg w-75"
+            className="form-control form-control-lg w-100"
             value={bugDescription}
             placeholder="Enter bugDescription"
             onChange={updateBugDescription}
@@ -146,9 +161,15 @@ export const BugRaise = () => {
           />
         </div>
 
+        <div className="row text-light " style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h5>Critical Level</h5>
+       </div>
         <div className="row mb-1 ">
            <select
-                className="custom-select custom-select-lg w-75"
+                className="custom-select custom-select-lg w-100"
                 id = "level"
                 onChange={(e) => {
                   const selectedCriticalLevel = e.target.value;
@@ -162,20 +183,32 @@ export const BugRaise = () => {
               </select>
          
         </div>
+        <div className="row text-light " style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h5>Staff Id</h5>
+       </div>
         <div className="row mb-1 ">  
           <input
             type="text"
-            className="form-control form-control-lg w-75"
+            className="form-control form-control-lg w-100"
             value={staff}
             placeholder="Enter staffId"
             onChange={updateStaff}
             required    
           />
         </div>
+        <div className="row text-light " style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h5>Customer Id</h5>
+       </div>
         <div className="row mb-1 ">  
           <input
             type="text"
-            className="form-control form-control-lg w-75"
+            className="form-control form-control-lg w-100"
             value={customerId}
             placeholder="Enter customerId"
             onChange={updateCustomer}
@@ -184,10 +217,16 @@ export const BugRaise = () => {
           />
         </div>
 
-        <div className="row mb-1 ">  
+        <div className="row text-light " style={{
+                  fontFamily: "initial",
+                }}
+              >
+       <h5>Project Id</h5>
+       </div>
+        <div className="row mb-3 ">  
           <input
             type="text"
-            className="form-control form-control-lg w-75"
+            className="form-control form-control-lg w-100"
             value={project}
             placeholder="Enter projectId"
             onChange={updateProject}
@@ -200,13 +239,15 @@ export const BugRaise = () => {
 
       
         <div>
-          <div className="row mb-1">
+          <div className="row mb-1" style={{
+                  fontFamily: "initial",
+                }}>
           
               <input
                 type="button"
                 onClick={addNewBug}
                 value="Add Bug"
-                className="btn btn-lg btn-success w-75"
+                className="btn btn-lg btn-success w-100"
               />
         
           </div>

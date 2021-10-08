@@ -139,7 +139,7 @@ return (
         />
         </div>
 
-        <div className="row text-light col-7 justify-content-center">
+        <div className="row text-light col-6 ml-5 justify-content-center">
        <h5>UserName</h5>
        </div>
 
@@ -171,10 +171,10 @@ return (
         />
         </div>
 
-        <div className="row text-light col-8 justify-content-center">
+        <div className="row text-light col-7 ml-3 justify-content-center">
        <h5>Mobile Number</h5>
        </div>
-        <div className="row mb-2 justify-content-center">
+        <div className="row mb-3 justify-content-center">
         <input
           type="text"
           className="form-control w-50"

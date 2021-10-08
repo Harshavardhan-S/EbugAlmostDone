@@ -51,13 +51,13 @@ export const CustomerList = () => {
         <div >
         <div>
       <center>
-      <h3 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
+      <h3 className="mt-4 mb-3 sticky-top "style={{ fontFamily: "initial" }}>
         LIST OF CUSTOMERS
       </h3></center>
       </div>
 
           <table className="table" >
-            <thead className="thead-dark" style={{ fontFamily: "initial", fontSize: "19px" }}>
+            <thead className="thead-dark sticky-top" style={{ fontFamily: "initial", fontSize: "19px" }}>
               <tr>
                 <th scope="col">CustomerID</th>
                 <th scope="col">Name</th>
@@ -70,10 +70,11 @@ export const CustomerList = () => {
               </tr>
             </thead>
             <tbody className="text-dark">
-            {state.customer.customerList.length===0 && <center>
+            <th colSpan="12">
+        {state.customer.customerList.length===0 && <center>
       <h4 className="mt-4 mb-3  "style={{ fontFamily: "initial" }}>
-      <th scope="row">Currently there are no customers</th>
-      </h4></center>}
+      <th scope="row">Currently there are no customers in the list</th>
+      </h4></center>}</th>
               {state.customer.customerList.map((item, index) => (
                 <tr key={index}>
                   <th scope="row">{item.customerId}</th>
